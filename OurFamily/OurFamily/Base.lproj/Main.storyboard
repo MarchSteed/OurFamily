@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,29 +36,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gj3-iB-o6L">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="evT-Hu-TIO">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gj3-iB-o6L">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ngq-77-iAR">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9Fa-bm-XJl">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell1" id="9Fa-bm-XJl">
+                                        <rect key="frame" x="0.0" y="25" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="嘟嘟的表情好焦虑" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKj-fM-Tmu">
+                                                    <rect key="frame" x="143" y="18" width="214" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baby" translatesAutoresizingMaskIntoConstraints="NO" id="OuP-1k-Aaf">
+                                                    <rect key="frame" x="100" y="10" width="33" height="33"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="OuP-1k-Aaf" secondAttribute="height" multiplier="1:1" id="QQK-dW-WCU"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="fKj-fM-Tmu" firstAttribute="leading" secondItem="OuP-1k-Aaf" secondAttribute="trailing" constant="10" id="4br-G6-aVi"/>
+                                            <constraint firstItem="fKj-fM-Tmu" firstAttribute="top" secondItem="9Fa-bm-XJl" secondAttribute="topMargin" constant="10" id="ACm-of-05G"/>
+                                            <constraint firstAttribute="bottom" secondItem="OuP-1k-Aaf" secondAttribute="bottom" constant="10" id="CKf-BH-Dws"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="fKj-fM-Tmu" secondAttribute="trailing" constant="10" id="doU-k2-6uo"/>
+                                            <constraint firstItem="OuP-1k-Aaf" firstAttribute="leading" secondItem="9Fa-bm-XJl" secondAttribute="leading" constant="100" id="euX-WO-W1z"/>
+                                            <constraint firstItem="OuP-1k-Aaf" firstAttribute="top" secondItem="9Fa-bm-XJl" secondAttribute="top" constant="10" id="q7D-So-Sqw"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="fKj-fM-Tmu" secondAttribute="bottom" constant="10" id="r4w-x6-M39"/>
+                                            <constraint firstItem="fKj-fM-Tmu" firstAttribute="leading" secondItem="OuP-1k-Aaf" secondAttribute="trailing" constant="10" id="xdh-YK-biI"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Q0Q-aC-07v">
+                                        <rect key="frame" x="60" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <size key="customSize" width="100" height="100"/>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="MG1-8l-SWP" id="wb1-xI-5eo"/>
+                                    <outlet property="delegate" destination="MG1-8l-SWP" id="8aB-xy-oSg"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gj3-iB-o6L" secondAttribute="bottom" id="52Y-Uu-BPu"/>
+                            <constraint firstItem="gj3-iB-o6L" firstAttribute="top" secondItem="F5j-nl-Fhg" secondAttribute="top" id="Dph-LU-TLT"/>
+                            <constraint firstItem="gj3-iB-o6L" firstAttribute="leading" secondItem="doT-Hg-jWh" secondAttribute="leading" id="MEq-Fs-QDH"/>
+                            <constraint firstItem="gj3-iB-o6L" firstAttribute="trailing" secondItem="doT-Hg-jWh" secondAttribute="trailing" id="cI8-FJ-Ypj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="doT-Hg-jWh"/>
                     </view>
                     <toolbarItems>
@@ -69,10 +113,16 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hR6-51-fso"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="gj3-iB-o6L" id="TgO-gj-pDa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pa-bO-qYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="306" y="100"/>
+            <point key="canvasLocation" x="304.80000000000001" y="99.400299850074973"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="baby" width="1008" height="1344"/>
+    </resources>
 </document>

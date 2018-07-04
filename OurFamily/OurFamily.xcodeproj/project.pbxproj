@@ -13,6 +13,7 @@
 		9DBEEDA220EC74FA00435B9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DBEEDA020EC74FA00435B9A /* LaunchScreen.storyboard */; };
 		9DBEEDA520EC74FA00435B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEEDA420EC74FA00435B9A /* main.m */; };
 		9DBEEDAD20EC80A700435B9A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEEDAC20EC80A700435B9A /* HomeViewController.m */; };
+		9DBEEDB620ECC03300435B9A /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEEDB520ECC03300435B9A /* CollectionViewCell.m */; };
 		D7802A17CAF05EF9B5BAEAF7 /* libPods-OurFamily.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FAAB37433ECDA4121BB303A /* libPods-OurFamily.a */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,10 @@
 		9DBEEDA420EC74FA00435B9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9DBEEDAB20EC80A700435B9A /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		9DBEEDAC20EC80A700435B9A /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		9DBEEDAE20ECBB4E00435B9A /* PublicDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicDefine.h; sourceTree = "<group>"; };
+		9DBEEDAF20ECBCA500435B9A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		9DBEEDB420ECC03300435B9A /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		9DBEEDB520ECC03300435B9A /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		E1C5763F8833FCB3CA3A09DA /* Pods-OurFamily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurFamily.release.xcconfig"; path = "Pods/Target Support Files/Pods-OurFamily/Pods-OurFamily.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +87,10 @@
 		9DBEED9420EC74F800435B9A /* OurFamily */ = {
 			isa = PBXGroup;
 			children = (
+				9DBEEDB320ECBFDB00435B9A /* Config */,
+				9DBEEDB220ECBFB400435B9A /* Model */,
+				9DBEEDB120ECBF9900435B9A /* View */,
+				9DBEEDB020ECBF7100435B9A /* Controller */,
 				9DBEEDAB20EC80A700435B9A /* HomeViewController.h */,
 				9DBEEDAC20EC80A700435B9A /* HomeViewController.m */,
 				9DBEED9520EC74F800435B9A /* AppDelegate.h */,
@@ -93,6 +102,38 @@
 				9DBEEDA420EC74FA00435B9A /* main.m */,
 			);
 			path = OurFamily;
+			sourceTree = "<group>";
+		};
+		9DBEEDB020ECBF7100435B9A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9DBEEDB120ECBF9900435B9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9DBEEDB420ECC03300435B9A /* CollectionViewCell.h */,
+				9DBEEDB520ECC03300435B9A /* CollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DBEEDB220ECBFB400435B9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9DBEEDB320ECBFDB00435B9A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				9DBEEDAF20ECBCA500435B9A /* PrefixHeader.pch */,
+				9DBEEDAE20ECBB4E00435B9A /* PublicDefine.h */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +230,7 @@
 			files = (
 				9DBEEDA520EC74FA00435B9A /* main.m in Sources */,
 				9DBEED9720EC74F800435B9A /* AppDelegate.m in Sources */,
+				9DBEEDB620ECC03300435B9A /* CollectionViewCell.m in Sources */,
 				9DBEEDAD20EC80A700435B9A /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +298,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OurFamily/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -312,6 +356,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OurFamily/PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -332,6 +378,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UFKU3W6G9X;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				INFOPLIST_FILE = OurFamily/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -350,6 +397,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UFKU3W6G9X;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				INFOPLIST_FILE = OurFamily/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
