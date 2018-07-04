@@ -10,8 +10,9 @@
 
 @implementation CollectionViewCell
 
--(UICollectionViewLayoutAttributes *)preferredLayoutAttributesFittingAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes {
-    //TODO:计算布局大小
-}
+//-(UICollectionViewLayoutAttributes *)preferredLayoutAttributesFittingAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes {
+//    //TODO:计算布局大小
+//    return nil
+//}
 
 @end

@@ -379,6 +379,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UFKU3W6G9X;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = OurFamily/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = OurFamily/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -398,6 +399,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UFKU3W6G9X;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = OurFamily/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = OurFamily/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
