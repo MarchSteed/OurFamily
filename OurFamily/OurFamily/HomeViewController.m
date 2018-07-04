@@ -22,7 +22,7 @@
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
     layout.estimatedItemSize = CGSizeMake(SCREEN_WIDTH, 200);
-    //branch Test 解决冲突
+    //branch Test develop_test
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
